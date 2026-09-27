@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications - Connectly</title>
+  <script src="/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="navbar"></header>
+
+  <main class="main-layout" style="grid-template-columns: 1fr; max-width: 750px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+      <h2 style="font-family: var(--font-editorial); font-size: 1.85rem; color: var(--text-main);">
+        Notifications
+      </h2>
+      <button id="markAllReadBtn" class="btn btn-outline btn-sm">Mark All as Read</button>
+    </div>
+
+    <!-- Notifications List Container -->
+    <div id="notificationsContainer"></div>
+  </main>
+
+  <nav id="mobileNav"></nav>
+
+  <script src="/js/toast.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/notifications.js"></script>
+</body>
+</html>

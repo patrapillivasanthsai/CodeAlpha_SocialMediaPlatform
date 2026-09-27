@@ -1,0 +1,6 @@
+node_modules/
+.env
+data/
+test_db_dir/
+*_db_dir/
+*.log

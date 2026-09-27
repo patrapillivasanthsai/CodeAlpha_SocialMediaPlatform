@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Feed - Connectly</title>
+  <script src="/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="navbar"></header>
+
+  <main class="main-layout">
+    <!-- Main Feed Column -->
+    <div class="feed-column">
+      <!-- Quick Create Post Widget -->
+      <div class="card">
+        <form id="quickCreatePostForm">
+          <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <textarea id="quickPostContent" class="form-control" placeholder="Share what's on your mind..." rows="3" required></textarea>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.85rem; flex-wrap: wrap; gap: 0.5rem;">
+            <input type="url" id="quickPostImage" class="form-control" placeholder="Image URL (optional)" style="flex: 1; min-width: 180px; font-size: 0.85rem; padding: 0.4rem 0.75rem;" />
+            <button type="submit" class="btn btn-primary btn-sm">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+              Publish
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Feed Navigation Tabs -->
+      <div class="tabs">
+        <div id="tabAll" class="tab active">All Posts</div>
+        <div id="tabFollowing" class="tab">Following</div>
+      </div>
+
+      <!-- Feed Posts Container -->
+      <div id="feedPosts"></div>
+    </div>
+
+    <!-- Right Sidebar Column (Desktop) -->
+    <aside class="sidebar-column">
+      <div class="card">
+        <h3 style="font-size: 1.15rem; color: var(--text-main); font-family: var(--font-editorial); margin-bottom: 0.75rem;">About Connectly</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 1rem;">
+          Connectly is a modern editorial social platform. Share thoughts, interact with creators, comment, and like updates with responsive feedback.
+        </p>
+        <a href="/create-post.html" class="btn btn-accent btn-sm btn-block">Publish New Post</a>
+      </div>
+
+      <div class="card">
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.75rem;">Explore Community</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.85rem;">Discover developers & designers on the network.</p>
+        <a href="/search.html" class="btn btn-outline btn-sm btn-block">Search Users</a>
+      </div>
+    </aside>
+  </main>
+
+  <nav id="mobileNav"></nav>
+
+  <script src="/js/toast.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/feed.js"></script>
+</body>
+</html>
